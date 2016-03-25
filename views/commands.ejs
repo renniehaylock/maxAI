@@ -1,0 +1,13 @@
+<html>
+  Hello <%= user.username %>
+  <div>
+    Here are your commands:
+
+    <ul>
+      <% for(var i=0; i<commands.length; i++) {%>
+        <li><%= commands[i].query %> <%= commands[i].response %></li>
+      <% } %>
+    </ul>
+  </div>
+  <button><a href="/command/new">New Command</a></button>
+</html>
