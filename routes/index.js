@@ -39,18 +39,31 @@ router.get('/command/new', function(req, res, next) {
 
 router.post('/command/new', function(req, res, next) {
   console.log(req);
-  Command.create({ query: req.body.query, user: req.user._id, response: req.body.response, channel: null }, function(err, newCommand) {
+  Command.create({ query: req.body.query.lower(), user: req.user._id, response: req.body.response, channel: null }, function(err, newCommand) {
     res.redirect('/commands');
   });
 });
 
 router.get('/api/query',function(req, res) {
   var userId = req.param('userId');
-  var queryValue = req.param('query');
+  var queryValue = req.param('query').lower();
   Command.findOne({ user: userId, query: queryValue}, function(err,command) {
     if (err || !command) {
-      res.json({ error: "Sorry, I don't know what that means" });
+      res.json({ answer: "Sorry, I don't know what that means" });
     } else {
+      
+      // TODO: Here we would normally take this command,
+      // check what action it belongs to...
+      // using the action and the proper channel make a call 
+      // to the proper channel endpoint... use that response
+      // to send back answer to raspi
+      // 
+      // Problem:
+      // Jasper doesn't always get the perfect STT...
+      // So here we could traverse over all commands, calculating
+      // String metric to find what comman is closest to what the
+      // User needs...
+      //  
       res.json({ answer: command.response });
     };
   });
