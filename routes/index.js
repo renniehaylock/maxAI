@@ -39,14 +39,14 @@ router.get('/command/new', function(req, res, next) {
 
 router.post('/command/new', function(req, res, next) {
   console.log(req);
-  Command.create({ query: req.body.query.lower(), user: req.user._id, response: req.body.response, channel: null }, function(err, newCommand) {
+  Command.create({ query: req.body.query.toLowerCase();, user: req.user._id, response: req.body.response, channel: null }, function(err, newCommand) {
     res.redirect('/commands');
   });
 });
 
 router.get('/api/query',function(req, res) {
   var userId = req.param('userId');
-  var queryValue = req.param('query').lower();
+  var queryValue = req.param('query').toLowerCase();;
   Command.findOne({ user: userId, query: queryValue}, function(err,command) {
     if (err || !command) {
       res.json({ answer: "Sorry, I don't know what that means" });
