@@ -1,8 +1,189 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 16px "Source Sans Pro","Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #F6F6F6;
+  color: #5C5C5C;
+  padding-bottom: 50px;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: #4A90E2;
+}
+
+::selection {
+    color: white; 
+    background: #4A90E2;
 }
 
 a {
-  color: #00B7FF;
+  text-decoration: none
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+    font: 38px "Source Sans Pro","Lucida Grande", Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    color: black;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font: 28px "Source Sans Pro","Lucida Grande", Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    color: black;
+    letter-spacing: 1px;
+}
+
+
+input:focus { 
+  color: #4A90E2;
+  box-shadow: none;
+  outline: none;
+}
+
+textarea:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.max-landing {
+  margin-bottom: 80px;
+}
+
+.full-width {
+      width: 100%;
+}
+
+.blue-button {
+    border: none;
+    background-color: #4A90E2;
+    padding: 15px 15px;
+    color: white;
+    border-radius: 2px;
+    margin-top: 10px;
+}
+
+.field {
+    border: none;
+    background-color: white;
+    padding: 15px 15px;
+    color: #C6C6C6;
+    border-radius: 2px;
+    border: 1px solid #E7E7E7;
+    margin-bottom: 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.login-container {
+  top:10%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 400px;
+  text-align: center;
+}
+
+input {
+  font: 14px "Source Sans Pro","Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.float-right {
+  position: relative;
+  float: right;
+}
+
+.float-left {
+  position: relative;
+  float: left;
+}
+
+.center-content {
+  width: 50%;
+  padding-bottom: 50px;
+}
+
+.center-content div {
+  padding-top: 150px;
+}
+
+.center-content li {
+  background-color: white;
+  padding: 25px 25px 0px 25px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+  margin-bottom: 8px;
+  width: 100%;
+  height: 48px;
+}
+
+.center-content li.entry {
+  margin-bottom: 30px;
+  border: 1px solid #C6C6C6;
+  height: 55px;
+}
+.center-content input {
+  border: none;
+  font: 19px "Source Sans Pro","Lucida Grande", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+.center-content input.blue-button {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    position: relative;
+    bottom: 15px;
+}
+
+.left-nav {
+  width: 25%;
+}
+
+.left-nav div {
+    padding: 60px;
+}
+
+.left-nav ul {
+  margin-top: 80px;
+}
+
+.left-nav li {
+  margin-bottom: 10px;
+  font-weight: 300;
+  color: #B6B6B6;
+}
+.left-nav li a{
+  font-weight: 600;
+  color: #5C5C5C;
+}
+.query {
+  font: 16px "Source Sans Pro","Lucida Grande", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #898989;
+}
+
+.right-sidebar {
+  padding: 0px;
+  margin: 0px;
+  width: 25%;
+  text-align: right;
+  font-weight: 300;
+}
+
+.right-sidebar div {
+  padding: 10px;
+}
+.right-sidebar span.username {
+  font-weight: 600;
+  color:black;
 }

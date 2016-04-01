@@ -1,15 +1,22 @@
-<html>
-<form action="/login" method="post">
-    <div>
-        <label>Username:</label>
-        <input type="text" name="username"/>
-    </div>
-    <div>
-        <label>Password:</label>
-        <input type="password" name="password"/>
-    </div>
-    <div>
-        <input type="submit" value="Log In"/>
-    </div>
-</form>
+<html> 
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700,900' rel='stylesheet' type='text/css'>
+        <link href="/stylesheets/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="login-container">
+            <h1 class="max-landing">MAX</h1>
+            <form action="/login" method="post">
+                <div>
+                    <input type="text" class="field" name="username" placeholder="Email"/>
+                </div>
+                <div>
+                    <input type="password" class="field" name="password" placeholder="Password"/>
+                </div>
+                <div>
+                    <input class="blue-button full-width" type="submit" value="Log In"/>
+                </div>
+            </form>
+        </div>
+    </body>
 </html>
